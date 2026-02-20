@@ -22,9 +22,7 @@ class ESMFoldPredictor:
         from transformers import AutoTokenizer, EsmForProteinFolding
 
         self.tokenizer = AutoTokenizer.from_pretrained("facebook/esmfold_v1")
-        self.model = EsmForProteinFolding.from_pretrained(
-            "facebook/esmfold_v1", low_cpu_mem_usage=True
-        )
+        self.model = EsmForProteinFolding.from_pretrained("facebook/esmfold_v1")
         self.model = self.model.eval()
         if config.device != "cpu":
             self.model = self.model.to(config.device)
