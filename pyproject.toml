@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proteindesign"
+version = "0.1.0"
+authors = [
+    {name = "Dexiong Chen", email = "dchen@biochem.mpg.de"},
+]
+description = "Compute designability of protein structures via inverse folding and structure prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "BSD-3-Clause"}
+keywords = ["protein design", "designability", "inverse folding", "structure prediction", "ProteinMPNN", "ESMFold", "AlphaFold"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: BSD License",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "biopython",
+    "biotite>=0.37",
+    "tmtools",
+]
+
+[project.optional-dependencies]
+esmfold = ["fair-esm[esmfold]", "torch"]
+test = ["pytest"]
+
+[project.scripts]
+proteindesign = "proteindesign.cli:main"
+
+[project.urls]
+Repository = "https://github.com/dexiongc/proteindesign"
+Issues = "https://github.com/dexiongc/proteindesign/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

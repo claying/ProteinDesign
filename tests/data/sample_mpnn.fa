@@ -1,0 +1,8 @@
+>mini, score=1.2345, global_score=1.5678, fixed_chains=[], designed_chains=['A'], model_name=v_48_020, git_hash=abc123, seed=42
+AGVLS
+>T=0.1, sample=1, score=0.8765, global_score=1.0234, seq_recovery=0.6000
+AKVLS
+>T=0.1, sample=2, score=0.9123, global_score=1.1456, seq_recovery=0.4000
+DGILS
+>T=0.1, sample=3, score=0.7890, global_score=0.9876, seq_recovery=0.8000
+AGVMS
