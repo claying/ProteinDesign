@@ -18,7 +18,7 @@ The pipeline outputs a table of per-sequence metrics including scRMSD, scTM, pLD
 # Core package (metrics, ProteinMPNN wrapper, AlphaFold2 via ColabFold)
 pip install .
 
-# With ESMFold support (requires PyTorch + CUDA GPU)
+# With ESMFold support (Hugging Face Transformers, requires PyTorch + CUDA GPU)
 pip install ".[esmfold]"
 
 # Development

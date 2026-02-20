@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-esmfold = ["fair-esm[esmfold]", "torch"]
+esmfold = ["transformers[torch]", "accelerate"]
 test = ["pytest"]
 
 [project.scripts]
